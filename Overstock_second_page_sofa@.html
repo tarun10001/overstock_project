@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofa Pages</title>
+  <script src="https://kit.fontawesome.com/b9c33b44d0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+       * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #navbarall {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            width: 100%;
+
+
+        }
+
+
+        #india {
+            display: flex;
+            flex-direction: row;
+            border: 0.5px 0px 0.5px 0.5px solid rgb(182, 182, 182);
+            background-color: gainsboro;
+            width: 2000px;
+
+        }
+
+        .indiaim {
+            height: 20px;
+            width: 35px;
+            border-radius: 20px;
+
+        }
+
+        #india>div {
+            padding: 4px;
+        }
+
+        .seim {
+            background-color: white;
+        }
+
+        .serch {
+            display: flex;
+            width:100%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 10px;
+            /* border: 1px solid green; */
+
+        }
+
+        .logo {
+            height: 45px;
+            width: 160px;
+        }
+        .serchAndserchLogo{
+            display: flex;
+            width: 60%;
+            /* border: 3px solid red; */
+        }
+
+        .serch>div>input {
+            height: 35px;
+            width: 90%;
+            margin-right: 0px;
+            /* border: 3px solid red; */
+        }
+
+        .seric {
+            height: 35px;
+            width: 30px;
+            background-color: red;
+            margin-left: 0px;
+            padding: 3px;
+            padding-left: 0px;
+
+
+        }
+
+        .fas {
+            margin: 4px;
+            padding: 3px;
+
+
+        }
+
+        .user {
+            height: 35px;
+            width: 35px;
+
+            text-align: center;
+            padding: 4px;
+
+        }
+
+        .user>div,
+        h6,
+        .fas {
+            margin: 0px;
+        }
+
+        .far {
+            margin-left: 1px;
+
+        }
+
+        .ALC {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 25% 25% 25%;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px;
+            font-size: 16px; */
+            cursor: pointer;
+            /* border: 1px solid blue; */
+            border: none;
+            text-decoration: underline;
+
+        }
+
+        .right-menu {
+            position: relative;
+            display: inline-block;
+            float: right;
+            /* margin-right: 50%; */
+
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown-menu td {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* display: block; */
+            display: inline-block;
+            /* width: 400px; */
+            width: 90px;
+            padding: 10px;
+
+
+            /* border: 1px solid red; */
+        }
+
+        .dropdown-menu {
+            /* color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; */
+            width: 350px;
+            height: 300px;
+            /* display: flex;  */
+            background-color: honeydew;
+
+
+
+            /* border: 4px solid red; */
+            font-size: 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        .right-menu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .right-menu:hover.menu-button {
+            background-color: transparent;
+        }
+
+
+        .accmenu-button{
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px; */
+            font-size: 10px;
+            cursor: pointer;
+           border: 0px;
+            margin-left: 10px;
+            padding-left: -15px;
+
+        }
+        .acc-menu{
+            position: relative;
+            /* display: inline-block; */
+            float: right;
+            margin-right: 50%;
+           margin: 5px;
+
+        }
+        .accdropdown-menu{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index:1;
+           
+            
+        }
+
+        .accdropdown-menu ul:hover{
+            background-color: #000;
+            color: #fff;
+           
+
+        }
+        .acc-menu:hover .accdropdown-menu{
+            display: block;
+        }
+        .acc-menu:hover.accmenu-button{
+            background-color: transparent;
+        }
+
+        .testcase {
+            height: 70px;
+            width: 70px;
+            border: 4px solid rgb(223, 74, 37);
+        }
+        #allbtn {
+            height: 40px;
+            width:97vw;
+            border: 1px solid rgb(181, 181, 182);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-around;
+            margin-top: 8px;
+            padding: 0px, 5%;
+
+        }
+
+        .btn>button {
+            border: none;
+            background-color: white;
+        }
+
+        #bedpage{
+            color: red;
+            cursor: pointer;
+        }
+
+        #sofaPage{
+            color: red;
+            cursor: pointer;
+        }
+/* //mainPart */
+    #container {
+        display: flex;
+        margin-bottom: 3%;
+        cursor: pointer;
+        margin-top: 40px;
+      }
+      
+      .top {
+        color: grey;
+        margin-left: 3%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+      }
+      
+      #container p:hover {
+        text-decoration: underline;
+      }
+      
+      h1 {
+        margin-left: 3%;
+        font-family: sans-serif;
+        margin-bottom: 2%;
+        margin-top: 200px;
+      }
+      
+      a {
+        color: red;
+      }
+      
+      .left {
+        width: 25%;
+        margin-left: 5%;
+        margin-top: 0.5%;
+        color: #2f3337;
+        font-family: sans-serif;
+      }
+      .left > p {
+        margin-bottom: 20px;
+      }
+      
+      .right {
+        width: 65%;
+        display: flex;
+        justify-content: flex-start;
+        margin-right: 3%;
+        background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+      }
+      
+      .right > img {
+        width: 25%;
+        margin-left: 3%;
+        margin-top: 3%;
+        opacity: 0.7;
+        background-color: rgb(86, 86, 82);
+      }
+      
+      #container1,
+      #container2,
+      #container3,
+      #container4 {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+        margin: auto;
+        margin-bottom: 10vh;
+        margin-top: 3vh;
+        font-family: sans-serif;
+        text-align: center;
+        cursor: pointer;
+      }
+      #container1 :hover {
+        text-decoration: underline;
+      }
+      #container2 :hover {
+        text-decoration: underline;
+      }
+      
+      #container3 :hover {
+        text-decoration: underline;
+      }
+      #container4 :hover {
+        text-decoration: underline;
+      }
+      
+      img {
+        width: 100%;
+        height: 250px;
+      
+        margin-bottom: 3%;
+      }
+      
+      h2 {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-family: sans-serif;
+      }
+      p {
+        margin: 0px;
+      }
+      
+      /* @media only screen and (max-width: 320px) {
+                #container {
+                  grid-template-columns: repeat(1, 1fr);
+                }
+              }
+              @media only screen and (min-width: 321px) and (max-width: 720px) {
+                #container {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+              } */
+      
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      
+      #sidebarleft > #sidebar {
+        width: 100%;
+        overflow: scroll;
+        height: 400px;
+        overflow-x: hidden;
+        cursor: pointer;
+      }
+      hr {
+        margin-left: 15%;
+      }
+      #sidebarleft {
+        width: 20%;
+        margin-left: 3%;
+      }
+      
+      nav ul li {
+        line-height: 40px;
+        list-style: none;
+      }
+      nav ul li a {
+        position: relative;
+        color: rgb(14, 12, 12);
+        text-decoration: none;
+        font-size: 15px;
+        padding-left: 40px;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+      }
+      nav ul li.active a {
+        /* color: rgb(243, 120, 120); */
+        border-top-color: rgb(208, 211, 40);
+        border-bottom-color: blue;
+      }
+      nav ul ul {
+        position: static;
+        display: none;
+      }
+      .feat-show,
+      .price-show,
+      .colors-show,
+      .materials-show,
+      .sizes-show,
+      .styles-show,
+      .spring-show,
+      .uphol-show,
+      .stats-show,
+      .finishes-show {
+        color: grey;
+        cursor: pointer;
+      }
+      
+      .submenu :hover {
+        text-decoration: underline;
+      }
+      nav ul .feat-show.show {
+        display: block;
+      }
+      nav ul .price-show.show1 {
+        display: block;
+      }
+      nav ul .colors-show.show2 {
+        display: block;
+      }
+      nav ul .materials-show.show3 {
+        display: block;
+      }
+      nav ul .sizes-show.show4 {
+        display: block;
+      }
+      nav ul .styles-show.show5 {
+        display: block;
+      }
+      nav ul .spring-show.show6 {
+        display: block;
+      }
+      nav ul .uphol-show.show7 {
+        display: block;
+      }
+      nav ul .stats-show.show8 {
+        display: block;
+      }
+      nav ul .finishes-show.show9 {
+        display: block;
+      }
+      .submenu {
+        margin-left: 20%;
+      }
+      nav ul li a span {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 22px;
+        transition: transform 0.4s;
+      }
+      nav ul li a span.rotate {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+      
+      #container5 {
+        display: grid;
+        width: 68%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2%;
+        font-family: sans-serif;
+        cursor: pointer;
+        margin-left: 4%;
+      }
+      
+      #maincontainer {
+        display: flex;
+        width: 100%;
+        margin: auto;
+      }
+      
+      #container5>div >h4 {
+        color: rgb(255, 115, 0);
+      }
+      #container5>div >h3 {
+        color: red;
+      }
+      #container5 >div>img {
+        height: 70%;
+        width: 100%;
+      }
+      #container5>div >h5 {
+        color: red;
+        font-size: 20px;
+      }
+      #container5 >div {
+        justify-content: space-between;
+      }
+      #container5 >div>div{
+        display: flex;
+        color: red;
+        font-size:2vh;
+      }
+      #bottombox {
+        width: 30%;
+        margin: auto;
+        display: flex;
+      }
+      #bottombox div {
+        text-align: center;
+        padding-top: 3.5%;
+        margin-top: 20%;
+        width: 60px;
+        height: 50px;
+        cursor: pointer;
+      }
+      #circleactive {
+      background-color: #2F3337;
+      width: 50%;
+      color: white;
+      margin: auto;
+      text-align: center;
+      border-radius: 70%;
+      }
+      #bottombox div:hover {
+        color: white;
+        background-color: #2F3337;
+      width: 50px;
+      border-radius: 70%;
+      }
+      #container5  h5 {
+      font-size: 17px;
+      }
+      #container5  p{
+font-size: 14px;
+      }
+
+      #footer {
+        margin-top: 5vh;
+        width: 100%;
+        height: 500px;
+      }
+      .footer1 {
+        height: 70%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: #545658;
+        color: rgb(255, 255, 255);
+      }
+      .footer1 > div > h5,
+      p {
+        margin: 2vh;
+      }
+      .footer1 > div {
+        padding: 10px;
+      }
+      
+      .footer2 {
+        height: 30%;
+        background-color: #2F3337;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+      .fot2div2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: initial;
+      }
+      .footer2 > div {
+        padding: 20px;
+      }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="navbarall">
+    <div id="india">
+        <div>Ships to:</div>
+        <div><img class="indiaim"
+                src="https://media.istockphoto.com/photos/the-indian-flag-with-horizontal-tricolor-design-picture-id460844989?s=612x612"
+                alt=""></div>
+        <div>INDIA</div>
+    </div>
+    <div class="serch">
+        <img class="logo"
+            src="https://logo-all.ru/uploads/posts/2016-04/0_overstock.com_logo.jpg"
+            alt="">
+            <div class="serchAndserchLogo">
+        <input type="text" placeholder="Serch">
+        <div class="seric"><i class="fas fa-search"></i></div>
+    </div>
+        <div class="ALC">
+            <div class="user">
+                <div> <i class="far fa-user"></i></div>
+
+                <!-- <h6>Account</h6> -->
+                <div class="acc-menu">
+                    <button class="accmenu-button">account</button>
+                    <div class="accdropdown-menu">
+           
+                <ul id="openlogpage">Account</ul>
+                <ul id="logoutTheUser">logout</ul>
+             
+             
+            
+                         
+                    </div> 
+                 </div> 
+            </div>
+            <div class="user">
+                <i class="far fa-heart"></i>
+                <h6>List</h6>
+            </div>
+            <div class="user addtocartbu">
+                <i class="fas fa-cart-plus"></i>
+                <h6>cart</h6>
+            </div>
+        </div>
+    </div>
+    <div id="allbtn">
+        <div class="productBar">
+            <div class="right-menu">
+                <button class="menu-button">Furniture</button>
+                <div class="dropdown-menu">
+
+
+                    <table>
+                        <tr>
+                            <td id="sofaPage">sofa & couches</td>
+                            <td>kitchen & dining Sets</td>
+
+                            <td>Bedroom</td>
+                            
+                        </tr>
+
+                    </table>
+
+                    <table>
+                        <tr>
+                            <!-- <td>
+                                <div class="testcase"></div>
+                            </td> -->
+                            <td id="bedpage">Beds</td>
+                            <td>Sectionala</td>
+                            <td>Benches</td>
+                        </tr>
+
+                    </table>
+
+                    <table>
+                        <tr>
+                            <td>Accent Chair</td>
+
+                            <td>Dressers</td>
+                            <td>Bar Table</td>
+                            
+                        </tr>
+
+                    </table>
+
+                    <table>
+                        <tr>
+                            <td>Kids Beds</td>
+                            <td>Home Bars</td>
+
+                            <td>Desks</td>
+                            
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="btn"><button>Rugs</button></div>
+        <div class="btn"><button>Decor</button></div>
+        <div class="btn"><button>Bed & Bath</button></div>
+        <div class="btn"><button>Home Improvent</button></div>
+        <div class="btn"><button>Kitchen</button></div>
+        <div class="btn"><button>Outdoor</button></div>
+        <div class="btn"><button>Jewelry</button></div>
+        <div class="btn"><button>Lighting</button></div>
+        <div class="btn"><button>Kids & Baby</button></div>
+        <div class="btn"><button>More</button></div>
+        <div class="btn"><button>Idea</button></div>
+        <div class="btn"><button>Seles & deles</button></div>
+    </div>
+</div>
+
+  <!-- mainpart -->
+  <div>
+    <p class="top">Furniture / Bedroom Furniture / Beds</p>
+
+    <h1>Sofas & Couches</h1>
+
+    <div id="container">
+      <div class="left">
+        <p>Sofas</p>
+        <p>Sectional</p>
+        <p>Loveseat</p>
+        <p>Sleeper Sofas</p>
+        <p>Leather Sofas</p>
+        <p>Recliner Sofas</p>
+        <a href="https://www.overstock.com/Home-Garden/Beds/On-Sale,/sale,/2013/subcat.html" target="_blank">Shop All
+          Sofas on Sale</a>
+      </div>
+
+      <div class="right">
+        <img src="https://ak1.ostkcdn.com/img/mxc/01102022_HB_INTL_4.svg?imwidth=1920" alt="pop" />
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Shop by Size</h2>
+    <div id="container1"></div>
+  </div>
+  <div>
+    <h2>Shop by Design</h2>
+    <div id="container2"></div>
+  </div>
+
+  <div>
+    <h2>Shop by Feature</h2>
+    <div id="container3"></div>
+  </div>
+
+  <div>
+    <h2>Shop by Material</h2>
+    <div id="container4"></div>
+  </div>
+
+
+
+  <div id="maincontainer">
+
+    <div id="sidebarleft">
+      <nav id="sidebar">
+
+        <ul>
+          <li>
+            <a class="feat-btn">Sofas Designs
+              <span class="fas fa-caret-down first"></span>
+            </a>
+            <hr>
+            <ul class="feat-show">
+              <li><input class="submenu" type="checkbox" />Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+            </ul>
+          </li>
+
+
+
+          <li>
+            <a class="price-btn">Price
+              <span class="fas fa-caret-down second"></span>
+            </a>
+            <hr>
+            <ul class="price-show">
+              <li><input class="submenu" type="checkbox" /> INR 10000.00</li>
+              <li><input class="submenu" type="checkbox" /> INR 15000.00</li>
+              <li><input class="submenu" type="checkbox" /> INR 21000.00</li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="colors-btn">Colors
+              <span class="fas fa-caret-down third"></span>
+            </a><hr>
+            <ul class="colors-show">
+              <li><input class="submenu" type="checkbox" />RED</li>
+              <li><input class="submenu" type="checkbox" />GREEN</li>
+              <li><input class="submenu" type="checkbox" />WHITE</li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="materials-btn">Materials
+              <span class="fas fa-caret-down fourth"></span>
+            </a><hr>
+            <ul class="materials-show">
+              <li><input class="submenu" type="checkbox" />  Sofas</li>
+              <li><input class="submenu" type="checkbox" /> DESK</li>
+              <li><input class="submenu" type="checkbox" /> RUGS</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a class="sizes-btn">Sizes
+              <span class="fas fa-caret-down fifth"></span>
+            </a><hr>
+            <ul class="sizes-show">
+              <li><input class="submenu" type="checkbox" />BIG</li>
+              <li><input class="submenu" type="checkbox" />SMALL</li>
+              <li><input class="submenu" type="checkbox" />LARGE</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a class="styles-btn">Styles
+              <span class="fas fa-caret-down sixth"></span>
+            </a><hr>
+            <ul class="styles-show">
+              <li><input class="submenu" type="checkbox" /> Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Pages</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a class="spring-btn">Box Spring Required
+              <span class="fas fa-caret-down seventh"></span>
+            </a><hr>
+            <ul class="spring-show">
+              <li><input class="submenu" type="checkbox" /> Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Pages</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a class="uphol-btn">Upholstery Materials
+              <span class="fas fa-caret-down eighth"></span>
+            </a><hr>
+            <ul class="uphol-show">
+              <li><input class="submenu" type="checkbox" /> Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Pages</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a class="stats-btn">Stats included
+              <span class="fas fa-caret-down ninth"></span>
+            </a><hr>
+            <ul class="stats-show">
+              <li><input class="submenu" type="checkbox" /> Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Pages</li>
+            </ul>
+          </li>
+          </li>
+
+          <li>
+            <a href="#" class="finishes-btn">Finishes
+              <span class="fas fa-caret-down tenth"></span>
+            </a><hr>
+            <ul class="finishes-show">
+              <li><input class="submenu" type="checkbox" /> Platform Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Panel Sofas</li>
+              <li><input class="submenu" type="checkbox" /> Pages</li>
+            </ul>
+          </li>
+          </li>
+
+      </nav>
+    </div>
+
+    <div id="container5"></div>
+  </div>
+ 
+
+
+  <div id="bottombox">
+    <div>←</div>
+
+    <div id="circleactive">1</div>
+
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>...72</div>
+    <div>→</div>
+  </div>
+
+  <div id="footer">
+    <div class="footer1">
+      <div>
+        <h5>MY ACCOUNT</h5>
+        <p>Order & Returns</p>
+        <p>Email Preference</p>
+        <p>Accounts Settings</p>
+      </div>
+      <div>
+        <h5>LET US HELP</h5>
+        <p>Contact Cuntomer care</p>
+        <p>Shipping Information</p>
+        <p>Rerurn Policy</p>
+        <p>Intermational Help</p>
+        <p>Accessibility</p>
+      </div>
+      <div>
+        <h5>COMPANY INFORMATION</h5>
+        <p>About Overstak</p>
+        <p>Carrers</p>
+        <p>Sell Your Product</p>
+        <p>Overstock Dividend</p>
+        <p>Overstock Supply chain</p>
+      </div>
+      <div>
+        <h5>MORE WAYS TO SHOP</h5>
+        <p>Tips & ideas</p>
+        <p>Deals</p>
+        <p>clearrance</p>
+        <p>New Arrivals</p>
+      </div>
+    </div>
+    <div class="footer2">
+      <div>
+        <p>@ copyright 2021 ,Overstock.com.Inc.</p>
+        <p>779 Coliseum Way Midvale,UT 84004 | 1-800-843-2446</p>
+      </div>
+      <div class="fot2div2">
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <p>Promotion Terms</p>
+        <p>Ship to:INDIA </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+
+<script>
+  var Size_1 = [
+    {
+      name: "Sofas",
+      image:
+        "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Sofas&Couches.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Sleeper Sofas",
+      image:
+        "https://ak1.ostkcdn.com/img/mxc/06132019_SP057_BMOD1-2.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Reclinar Sofas",
+      image:
+        "https://ak1.ostkcdn.com/images/products/23463782/ProLounger-Dark-Grey-Tufted-Velvet-3-Seat-Recliner-Loveseat-n-a-9638d0eb-0d2a-40b6-af1f-ec3cc7c320c2.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Sofas Set",
+      image:
+        "https://ak1.ostkcdn.com/images/products/26275463/McCallister-Oatmeal-Tweed-Fabric-Seating-by-iNSPIRE-Q-Artisan-c0ddd0e0-f7db-4df0-a305-0c6c86886fcc.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Sectional",
+      image:
+        "https://ak1.ostkcdn.com/images/products/22057532/Matilda-Mid-Century-Fabric-Chaise-Sectional-Sofa-by-Christopher-Knight-Home-55b83a6e-471f-472e-a416-e229e72fa7d2.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Loveseat",
+      image:
+        "https://ak1.ostkcdn.com/images/products/25860917/Fenn-Square-Arm-Living-Room-Seating-by-iNSPIRE-Q-Modern-8e849781-c470-4cf1-883f-456f187dda91.jpg?imWidth=320&impolicy=medium",
+    },
+  ];
+
+  var Design_1 = [
+    {
+      name: "Modern & Contemporary Sofas",
+      image:
+        "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_ModernSofa.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Glam Sofas",
+      image:
+        "https://ak1.ostkcdn.com/images/products/26411394/Glam-Royal-Blue-Velvet-Fabric-Upholstered-Sofa-a045645c-4aa6-4d9e-93c1-3af61c558765.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Transitional Sofas",
+      image:
+        "https://ak1.ostkcdn.com/images/products/3911915/Uptown-Modern-Sofa-by-iNSPIRE-Q-Classic-c4f96a87-5699-44e1-9370-8e5cbeb7d384_600.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Mid-Centure Modern Sofas",
+      image:
+        "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Mid-CenturySofas.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Leather Sofas",
+      image:
+        "https://ak1.ostkcdn.com/images/products/22799314/Abbyson-Woodstock-Camel-Mid-Century-Top-Grain-Leather-Sofa-5b30abad-ff1b-4430-89ef-8f867bd7abea.jpg?imWidth=320&impolicy=medium",
+    },
+    {
+      name: "Velvet Sofas",
+      image:
+        "https://ak1.ostkcdn.com/images/products/19755850/Corvus-Prato-Velvet-Chesterfield-Sofa-with-Rolled-Arms-f30b8e2d-5902-4c39-a327-1542eac410ab.jpg?imWidth=320&impolicy=medium",
+    },
+  ];
+
+  var Feature_1 = [
+    {
+      name: "Platform Beds",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/711f1daadf1cb93c90e0ab7b71a9c5fddda2ab50/Silver-Orchid-Winters-Velvet-Loveseat.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Twin XL",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/a1af8bea6d4f8c83dda77c52b1058ff4068db62e/132%22-Wide-Linen-Fabric-Sectional-Sofa-with-2-Ottoman%2CRed.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Full / Double",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/670047700ae87bf2fa95adf4a1b1b7e74e454483/HOMCOM-4-in-1-Table-Sofa-Chair-Bed-with-5-Level-Adjustable-Backrest%2C-Footstool-for-Living-Room-or-Bedroom.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Queen",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/27fe4a7b22b4f47d3565ed880305dd9724358ccc/Modern-Style-Velvet-Sofa-%2C-Accent-Sofa%2C-Loveseat-Sofa-with-Metal-Feet.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "King",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/1bc9052b9b8c6109abc833aee7d5399351f38ec4/360%C2%B0-Swivel-Barrel-Velvet-Leisure-Chair-with-Movable-Pillow%2CGray.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "California King",
+      image:
+        "https://ak1.ostkcdn.com/images/products/9259607/Furniture-of-America-Perillean-Slatted-Transitional-Platform-Bed-dd29d3f6-0b3d-425f-afe3-3634283a1e6f_600.jpg?imWidth=320&impolicy=medium",
+    },
+  ];
+
+  var Material_1 = [
+    {
+      name: "Platform Beds",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/55bf94262db3048da1926e3a8c6d5da919a6fd60/Delray-Velvet-Tufted-Sofa.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Twin XL",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/a4da0dc637378a9fdcbf3cb1d400aece0d4c4bbf/Reversible-Velvet-Sectional-Sofa-Sleeper-Decor-with-Metal-Nails%2C-Pink.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Full / Double",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e0d8c0749c643ad8580f8257c06ab5d75d552c76/Morden-Style-Sofa-Set-Couch-Furniture-Upholstered-Armchair%2C-Loveseat-and-Three-Seat-Sofa-for-Home-or-Office-%281%2B2%2B3-Seat%29.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "Queen",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/b9b429219a9f4793a1e8686759f788b9fb70a25b/Modern-Linen-Folding-Sleeper-Sofa-with-Adjustable-Backrest%2C-Armrest.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "King",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4215e040f77d6384c1104e025955dc774593339a/Abbyson-Aspen-Ivory-Bonded-Leather-Foldable-Futon-Sleeper-Sofa.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      name: "California King",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/3cc053c9e0e4ec992cd51619ad44d4b932931099/FAMAPY-Modern-Recliner-Chair-w--Ottoman-and-Lumbar-Support%2C-Orange.jpg?imwidth=480&impolicy=medium",
+    },
+  ];
+
+  Size_1.map(function (item) {
+    var box = document.createElement("div");
+
+    var avtar = document.createElement("img");
+    avtar.setAttribute("src", item.image);
+
+    var title = document.createElement("p");
+    title.textContent = item.name;
+
+    box.append(avtar, title);
+
+    document.querySelector("#container1").append(box);
+  });
+
+  Design_1.map(function (item) {
+    var box = document.createElement("div");
+
+    var avtar = document.createElement("img");
+    avtar.setAttribute("src", item.image);
+
+    var title = document.createElement("p");
+    title.textContent = item.name;
+
+    box.append(avtar, title);
+
+    document.querySelector("#container2").append(box);
+  });
+
+  Feature_1.map(function (item) {
+    var box = document.createElement("div");
+
+    var avtar = document.createElement("img");
+    avtar.setAttribute("src", item.image);
+
+    var title = document.createElement("p");
+    title.textContent = item.name;
+
+    box.append(avtar, title);
+
+    document.querySelector("#container3").append(box);
+  });
+
+  Material_1.map(function (item) {
+    var box = document.createElement("div");
+
+    var avtar = document.createElement("img");
+    avtar.setAttribute("src", item.image);
+
+    var title = document.createElement("p");
+    title.textContent = item.name;
+
+    box.append(avtar, title);
+
+    document.querySelector("#container4").append(box);
+  });
+
+
+  $(".btn").click(function () {
+    $(this).toggleClass("click");
+    $("#sidebar").toggleClass("show");
+  });
+
+  $(".feat-btn").click(function () {
+    $("nav ul .feat-show").toggleClass("show");
+    $("nav ul .first").toggleClass("rotate");
+  });
+
+  $(".price-btn").click(function () {
+    $("nav ul .price-show").toggleClass("show1");
+    $("nav ul .second").toggleClass("rotate");
+  });
+
+  $(".colors-btn").click(function () {
+    $("nav ul .colors-show").toggleClass("show2");
+    $("nav ul .third").toggleClass("rotate");
+  });
+
+  $(".materials-btn").click(function () {
+    $("nav ul .materials-show").toggleClass("show3");
+    $("nav ul .fourth").toggleClass("rotate");
+  });
+
+  $(".sizes-btn").click(function () {
+    $("nav ul .sizes-show").toggleClass("show4");
+    $("nav ul .fifth").toggleClass("rotate");
+  });
+
+  $(".styles-btn").click(function () {
+    $("nav ul .styles-show").toggleClass("show5");
+    $("nav ul .sixth").toggleClass("rotate");
+  });
+
+  $(".spring-btn").click(function () {
+    $("nav ul .spring-show").toggleClass("show6");
+    $("nav ul .seventh").toggleClass("rotate");
+  });
+
+  $(".uphol-btn").click(function () {
+    $("nav ul .uphol-show").toggleClass("show7");
+    $("nav ul .eighth").toggleClass("rotate");
+  });
+
+  $(".stats-btn").click(function () {
+    $("nav ul .stats-show").toggleClass("show8");
+    $("nav ul .ninth").toggleClass("rotate");
+  });
+
+  $(".finishes-btn").click(function () {
+    $("nav ul .finishes-show").toggleClass("show9");
+    $("nav ul .tenth").toggleClass("rotate");
+  });
+
+
+  $("nav ul li").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+
+  var block_30 = [
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 43854.11,
+      name: "Futzca Modern L-Shaped Compact Convertible Sectional sofa W/ Reversible Chaise",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 57657.97,
+      name: "Jaxx Zipline Queen size Sleeper Loveseat and Ottoman Set",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/256d58d2028fa047cad1f10ef111bb5ffc8a7529/Brookside%E2%84%A2-Anna-Upholstered-Storage-Bed-with-Drawers%C2%A0.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 124691.83,
+      name: "Knightbridge Beige Chesterfield Sofa and Seating by iNspire Q Artisan",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f197e93d5efe0ca8a11726e86315e7c68bf39ef2/Knightsbridge-Beige-Fabric-Button-Tufted-Chesterfield-Sofa-and-Seating-by-iNSPIRE-Q-Artisan.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 27945.85,
+      name: "Roservera Bjorn Chesterfield Settle",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/696a26f965a1db3bf2c6b1db928a2931f0ad78d4/Rosevera-Bjorn-Chesterfield-Settee.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 24579.00,
+      name: "Serta Tracy 3-Seat Convertible Sofa",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c1fac6ee9aad2d45c6a9081ba32764d6a62adc8e/Serta%C2%AE-Tracy-3-Seat-Convertible-Sofa.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 64971.10,
+      name: "Morden Fort Uphoistered Chesterfield Couches For Living Room ,Living Room Furniture Sets,Sofa Fabric Velvet",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/456eefc6f57dc82f2fc295518f0752f816876bfe/Morden-Fort-Couches-for-Living-Room%2C-Sofas-for-Living-Room-Furniture-Sets%2C-Sofa%2C-Fabric%2C-Velvet.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 32410.36,
+      name: "Serta RTA Palisades Collection Sofa in Kingston -32 W *6.1 L *35H",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/7efff85d1c25530187d6ad1efd8670290a5d407a/Serta-RTA-Palisades-Collection-Sofa-in-Kingston-Beige.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee: 75538.93,
+      name: "Ovios High Back Couch Mid centure spring Faux Suede Leather Wood legs Chaise sofa",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/2a60b0fc00e7636aab90d390f56f24dd68e66a09/Ovios-High-Back-Couch-Mid-century-Spring-Top-Grain-Leather-Wood-Legs-Chaise-Sofa.jpg?imwidth=480&impolicy=medium",
+    },
+    {
+      rating: " ★ ★ ★ ★ ☆ ",
+      price: "Sale Starts at INR",
+      rupee:31027.26,
+      name: "Abbyson Jackon ivory Faux Foidable Futon Sofa Bed",
+      image:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/94f63f51e3626c0c9eb8cb869b71a25ce6c26b05/Abbyson-Jackson-Ivory-Leather-Foldable-Futon-Sofa-Bed.jpg?imwidth=480&impolicy=medium",
+    },
+  ];
+  
+  var x=JSON.parse(localStorage.getItem("CartItemsOfFur"));
+  if(x==null){
+    cartArrFF=[];
+  }
+  else{
+    var cartArrFF=JSON.parse(localStorage.getItem("CartItemsOfFur"))
+  }
+  console.log(typeof cartArrFF,cartArrFF)
+  localStorage.setItem("sofas",JSON.stringify(block_30));
+  var sofpage=JSON.parse(localStorage.getItem("sofas"))
+  console.log(sofpage);
+
+  sofpage.map(function (item) {
+    var div = document.createElement("div");
+
+    var avtar = document.createElement("img");
+    avtar.setAttribute("src", item.image);
+
+    var sale = document.createElement("div");
+
+    var price = document.createElement("h5");
+    price.textContent = item.price;
+
+    var rupee = document.createElement("h5");
+    rupee.textContent = item.rupee;
+
+    var rating = document.createElement("h4");
+    rating.textContent = item.rating;
+
+    var title = document.createElement("p");
+    title.textContent = item.name;
+
+    div.append(avtar, sale, rating, title);
+    sale.append(price, rupee);
+
+
+//     div.addEventListener("click",function(){
+//              alert("Added to cart")
+//              addToCart(item);
+//          });
+
+//     document.querySelector("#container5").append(div);
+//   });
+
+//   function addToCart(item) {
+//     console.log(item, "data");
+//     cartArrFF.push(item);
+//     localStorage.setItem("CartItemsOfFur",JSON.stringify(cartArrFF));
+// alert("Added successfully");
+// }
+
+
+div.addEventListener("click",function(){
+           
+             addToCart(item);
+         });
+
+    document.querySelector("#container5").append(div);
+  });
+
+  function addToCart(item) {
+    console.log(item, "data");
+    if(cartArrFF.length==1){
+      cartArrFF.pop();
+    }
+    cartArrFF.push(item);
+    
+    localStorage.setItem("CartItemsOfFur",JSON.stringify(cartArrFF));
+
+window.location.href="Addtocartpage.html"
+
+
+}
+
+//go to login page
+document.querySelector("#openlogpage").addEventListener("click" ,function(){
+        window.location.href="overstocklogin.html"
+    })
+//go to first page
+    document.querySelector("#bedpage").addEventListener("click" ,function(){
+        window.location.href="overstock_product_firstpage.html"
+    })
+    //go to sofa page 
+
+    document.querySelector("#sofaPage").addEventListener("click" ,function(){
+        window.location.href="overstock_second_page_sofa@.html"
+    })
+
+    //go to home page
+    document.querySelector(".logo").addEventListener("click" ,function(){
+        window.location.href="index.html"
+    })
+    //gotocart
+    document.querySelector(".addtocartbu").addEventListener("click" ,function(){
+        window.location.href="finalcart.html"
+    });
+
+</script>
