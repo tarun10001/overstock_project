@@ -1,10 +1,3 @@
-### We were a team of 4 from the Masai Web-15 batch who worked on cloning the Overstock website as part of our Unit-2 construct week. As a team, we were given a project to clone the Overstock.com website.
-Overstock.com(Clone) done during Unit-2 Construct Week of Masai School 
-Click on the link to view the project (https://overstochcloneproj.netlify.app/)
-
-
-
-
 # Overstock-Website-Clone
 #### About Overstock
 > Overstock.com, Inc. is an American internet retailer selling primarily furniture headquartered in Midvale, Utah near Salt Lake City. Controversial businessman Patrick M. Byrne founded Overstock.com in 1999. The company initially sold exclusively surplus and returned merchandise on an online e-commerce marketplace, liquidating the inventories of at least 18 failed dot-com companies at below-wholesale prices.The company continues to sell home decor, furniture, bedding, and many other goods that are closeout merchandise; however, it also sells new merchandise.
